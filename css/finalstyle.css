@@ -76,7 +76,7 @@ figcaption {
     animation: play-gif 3s infinite;
 }
 
-/* @keyframes headings {
+@keyframes headings {
     from{color: white;}
     to{color: rgb(254, 76, 201)}  
   }
@@ -85,21 +85,41 @@ h2{
     animation-name: headings;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-} */
+}
 
 
-@media (prefers-reduced-motion: reduce) {
-    .element-to-animate {
-      animation: none;
+  @media (prefers-reduced-motion:reduce) {
+    .animation {
+        display: none;
     }
-    .gif-image {
-         animation: none;    
+
+    h2 {
+        animation: none;
     }
-  }
+    .gif {
+        display: none;
+    }
+
+}
 
 @media (min-width: 700px) {
     .photo-gallery {
         grid-template-columns: minmax(200px, 1fr); 
     }
+}
+
+@media screen and (min-width: 750px) {
+
+    .photo-gallery > div{
+		max-height:none;
+    }
+    
+    .photo-gallery {
+    
+        gap: 5px;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    
 }
 
