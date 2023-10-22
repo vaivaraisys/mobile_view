@@ -102,11 +102,7 @@ h2{
 
 }
 
-@media (min-width: 700px) {
-    .photo-gallery {
-        grid-template-columns: minmax(200px, 1fr); 
-    }
-}
+
 
 @media screen and (min-width: 750px) {
 
